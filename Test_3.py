@@ -1,4 +1,3 @@
-phrase = 'SuCHi is an amaZing mom'
 
 def count_vowels( phrase ):
 	p = 0
@@ -9,7 +8,6 @@ def count_vowels( phrase ):
 		p = p + 1
 	return count
 
-print( count_vowels( phrase ) )
 
 def capitalize( phrase ):
 	output = ''
@@ -24,5 +22,10 @@ def capitalize( phrase ):
 			output = output + phrase[p].lower()
 		p = p + 1
 	return output
+
+
+phrase = 'SuCHi is an amaZing mom'
+
+print( count_vowels( phrase ) )
 
 print( capitalize( phrase ) ) 
