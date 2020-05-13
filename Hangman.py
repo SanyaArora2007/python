@@ -1,34 +1,15 @@
 from random import random
 
 MOVIE_NAMES = [
-	'the maze runner',
-	'pearl harbor',
-	'my girl',
-	'the scorch trial',
-	'the death cure',
-	'wreck it ralph',
-	'spider man far from home'
-	'avengers end game',
-	'avengers infinity war',
-	'harry potter and the chamber of secrets',
-	'trolls',
-	'jumanji',
-	'skyfal',
-	'casino royal',
-	'parasite',
-	'star wars',
-	'onword',
-	'frozen',
-	'knives out',
-	'aqua man',
-	'captain marvel',
-	'fast and furious',
-	'it',
-	'black panther',
-	'jojo rabbit',
-	'stranger things',
 	'office',
 	'friends',
+	'outer banks',
+	'ozark',
+	'never have i ever',
+	'pearl harbor',
+	'maze runner',
+	''
+
 ]
 
 def print_guessed( guessed ):
