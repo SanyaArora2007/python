@@ -1,5 +1,5 @@
 import turtle as t
-#t.hideturtle()
+t.hideturtle()
 
 def circle( x, y, fill, radius ):
 	t.penup()
