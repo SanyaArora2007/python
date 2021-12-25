@@ -1,39 +1,73 @@
 from random import random
 
 MOVIE_NAMES = [
-	'office',
-	'friends',
-	'outer banks',
-	'ozark',
-	'skyfall',
-	'pearl harbor',
-	'maze runner',
-	'stand by me',
-	'love simon',
-	'spectre',
-	'casino royal',
-	'quantum of solace',
-	'life is beautiful',
-	'avengers end game',
-	'avengers infinity war',
-	'gardians of the galaxy',
-	'jumanji',
-	'the invisible man',
-	'knives out',
-	'black panther',
-	'dolittle',
-	'venom',
-	'fast and furious',
-	'ready player one',
-	'captain america civil war',
-	'i am number four',
-	'mission impossible',
-	'all american',
-	'beauty and the beast',
-	'wonder women',
-	'lord of the rings',
-	'harry potter',
+	'frosty the snowman',
+	'rudolph the red nose reindeer',
+	'jingle bell rock',
+	'its beginning to look a lot like christmas',
+	'all i want for christmas is you',
+	'silent night',
+	'jingle bells',
+	'winter wonderland',
+	'let it snow',
 ]
+
+HANGMANPICS = ['',
+'''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''']
+
+
+def draw_hagman( lives ):
+	print( HANGMANPICS[ 7 - lives ] )
+
 
 def print_guessed( guessed ):
 	output = ''
@@ -62,8 +96,9 @@ guess = first_guess( movie )
 lives = 7
 already = set()
 
+
 while lives > 0 and '_' in guess:
-	print( 'You have ' + str( lives ) + ' lives' )
+	draw_hagman( lives )
 	print_guessed( guess )
 	guessed_letter = raw_input( 'Pick a letter : ' )
 
@@ -86,6 +121,7 @@ while lives > 0 and '_' in guess:
 print_guessed( guess )
 
 if '_' in guess:
+	draw_hagman( lives )
 	print( 'You lost all your lives, Boo' )
 else:
 	print( 'Congrats, you completed the hangman' )
